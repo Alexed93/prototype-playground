@@ -1,0 +1,46 @@
+{% set serviceName = "Testing of a template" %}
+{% extends "layouts/main.html" %}
+
+<!-- add elements that we want consistently across the service -->
+
+{% block pageTitle %}
+    {{pageTitle}} - {{serviceName}} - GOV.UK
+{% endblock %} 
+
+{% block header %}  
+    {{ govukHeader({    
+        homepageUrl: "/",    
+        serviceName: serviceName,    
+        serviceUrl: "/",    
+        containerClasses: "govuk-width-container"  
+    }) }}
+{% endblock %}  
+
+{% block beforeContent %}
+    {{ govukPhaseBanner({  
+        tag: {    
+            text: "Beta"  
+        },  
+        html: "This is a not a real service, it's just my playground"
+    }) }}
+
+    {{ govukBackLink({
+        text: "Back",
+        href: "javascript:window.history.back()"
+    }) }}
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">  
+
+            <!-- start of questionContent specific block -->
+
+            {% block form %}
+                
+            {% endblock %}
+
+            <!-- end questionContent specific block-->
+        </div>
+    </div>  
+{% endblock %}
