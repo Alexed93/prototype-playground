@@ -9,11 +9,11 @@
 
 {% block header %}  
     {{ govukHeader({    
-        homepageUrl: "/",    
+        homepageUrl: "/" + folder + "/",    
         serviceName: serviceName,    
         serviceUrl: "/",    
         containerClasses: "govuk-width-container"  
-    }) }}
+    }) }} 
 {% endblock %}  
 
 {% block beforeContent %}

@@ -1,0 +1,38 @@
+{% set pageTitle = "Do you want a drink?" %}
+{% extends "layouts/\_BASE.njk" %}
+
+{% block form %}
+
+  <form id="form" method="post" action="">
+
+    {{ govukRadios({
+      name: "drink-decision",
+      fieldset: {
+        legend: {
+          text: pageTitle,
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "It helps to be thirsty."
+      },
+      items: [
+        {
+          value: "yes~/" + folder + "/drink-options",
+          text: "Yes"
+        },
+        {
+          value: "no~/" + folder + "/no-drink-options",
+          text: "No"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+  </form>
+
+{% endblock %}

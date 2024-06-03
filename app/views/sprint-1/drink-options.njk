@@ -1,0 +1,46 @@
+{% set pageTitle = "Choose a drink" %}
+{% extends "layouts/\_BASE.njk" %}
+
+{% block form %}
+
+  <form id="form" method="post" action="">
+
+    {{ govukRadios({
+      name: "drink-decision",
+      fieldset: {
+        legend: {
+          text: pageTitle,
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Think of your health."
+      },
+      items: [
+        {
+          value: "coffee",
+          text: "Coffee"
+        },
+        {
+          value: "hot-choc",
+          text: "Hot chocolate"
+        },
+        {
+          value: "juice",
+          text: "Juice"
+        },
+        {
+          value: "water",
+          text: "Water"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+  </form>
+
+{% endblock %}

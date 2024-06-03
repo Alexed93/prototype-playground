@@ -1,4 +1,4 @@
-{% set pageTitle = "Do you want a drink?" %}
+{% set pageTitle = "This is my old question from sprint 1" %}
 {% extends "layouts/\_BASE.njk" %}
 
 {% block form %}
@@ -19,11 +19,11 @@
       },
       items: [
         {
-          value: "yes~/drink-options",
+          value: "yes~/" + folder + "/drink-options",
           text: "Yes"
         },
         {
-          value: "no~/no-drink-options",
+          value: "no~/" + folder + "/no-drink-options",
           text: "No"
         }
       ]
