@@ -5,6 +5,8 @@
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
+const radioButtonRedirect = require('radio-button-redirect')
+router.use(radioButtonRedirect)
 
 ////// Vicky Teinaki 
 ////// https://www.vickyteinaki.com/blog/more-efficient-prototyping-with-the-gov-uk-prototype-kit-step-by-step/
