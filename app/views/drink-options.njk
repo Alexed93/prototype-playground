@@ -1,4 +1,4 @@
-{% set pageTitle = "Do you want a drink?" %}
+{% set pageTitle = "Choose a drink" %}
 {% extends "layouts/\_BASE.njk" %}
 
 {% block form %}
@@ -15,16 +15,24 @@
         }
       },
       hint: {
-        text: "It helps to be thirsty."
+        text: "Think of your health."
       },
       items: [
         {
-          value: "yes~/drink-options",
-          text: "Yes"
+          value: "coffee",
+          text: "Coffee"
         },
         {
-          value: "no~/no-drink-options",
-          text: "No"
+          value: "hot-choc",
+          text: "Hot chocolate"
+        },
+        {
+          value: "juice",
+          text: "Juice"
+        },
+        {
+          value: "water",
+          text: "Water"
         }
       ]
     }) }}
